@@ -1,0 +1,41 @@
+.fixed-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 600px) {
+
+  }
+  a {
+    text-align: center;
+  }
+  .blue {
+    &:hover {
+      background: #2e92e2 !important;
+    }
+  }
+  &__mainButton {
+  }
+  ul {
+    margin: 1rem auto !important;
+  }
+
+  &__title {
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+
+    &.add {
+      color: #64b5f6;
+    }
+    &.save {
+      color: #4caf50;
+    }
+  }
+}
+
+//Materialize floating button
+.btn-floating{
+  &--zeroIndex{
+    z-index: 0 !important;
+  }
+}

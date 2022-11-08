@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    @!section('title')
+  </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../../node_modules/materialize-css/dist/css/materialize.min.css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137384350-1"></script>
+<script>
+window.dataLayer = window.dataLayer || []
+function gtag() {
+  dataLayer.push(arguments)
+}
+gtag('js', new Date())
+gtag('config', 'UA-137384350-1')
+</script>
+
+
+</head>
+<body>
+  @!section('notifications')
+  <div class="app-container2
+
+    @!section('current-class')
+      " style ="
+      @!section('custom-style-app-container')
+      ">
+
+    @!section('content')
+
+    </div>
+    <!-- <script src="../../node_modules/materialize-css/dist/js/materialize.min.js" charset="utf-8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    let handleRegisterButton = () => {
+  let registerbutton = document.querySelector(
+    'body > div > div.auth-form > form > div:nth-child(8) > button.register-button'
+  )
+  registerbutton.innerText = 'Processing..'
+  registerbutton.classList.add('currently-registering')
+}
+
+let handleLoginButton = () => {
+  let loginbutton = document.querySelector(
+    'body > div > div > form > div.form-group > button.login-button'
+  )
+
+  loginbutton.innerText = 'Logging in..'
+  loginbutton.classList.add('currently-registering')
+}
+let handlePwResetButton = () => {
+  let pwforgotbutton = document.querySelector(
+    'body > div > div.auth-form > form > div:nth-child(4) > button.pass-forgot'
+  )
+
+  pwforgotbutton.innerText = 'Sending....'
+  pwforgotbutton.classList.add('currently-registering')
+}
+let handleResetPw = () => {
+  let resetbutton = document.querySelector(
+    'body > div > div.auth-form > form > div:nth-child(7) > button.reset-pass'
+  )
+
+  resetbutton.innerText = 'Resetting Pass....'
+  resetbutton.classList.add('currently-registering')
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.input-field')
+  //
+  // var instance = M.updateTextFields()
+})
+</script>
+
+</body>
+</html>

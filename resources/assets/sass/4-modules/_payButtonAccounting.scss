@@ -1,0 +1,23 @@
+.driversPayButton {
+  &__button {
+    display: inline-block;
+    background: #1c61af;
+    padding: 15px 80px;
+    border-radius: 3px;
+    &--disabled {
+      background: gray;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+    &--pay {
+      background: green;
+    }
+    &--edit {
+      background: red;
+    }
+    &__link {
+      color: #ffffff;
+    }
+  }
+}

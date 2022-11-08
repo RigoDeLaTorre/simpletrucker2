@@ -1,0 +1,36 @@
+.tabs {
+  height: initial;
+  .indicator {
+    background-color: transparent;
+  }
+
+  &__accountingEdit {
+    flex-flow: row wrap;
+    display: flex;
+
+    background: transparent;
+  }
+  .tab {
+    &__accountingEdit {
+      a {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: $generalTextWhiteToBlack !important;
+
+        &.active {
+          background-color: #1f2840 !important;
+          color: white !important;
+        }
+      }
+      &--red {
+        border: 1px dashed red;
+        a {
+          &.active {
+            background-color: red !important;
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+}

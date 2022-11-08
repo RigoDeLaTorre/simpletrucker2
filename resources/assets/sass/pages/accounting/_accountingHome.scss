@@ -1,0 +1,32 @@
+@import './accountingInvoice';
+@import './modalDriverPay';
+@import "./accountingFilterButtons";
+
+
+#accounting {
+  overflow: auto;
+  min-height: 100%;
+}
+
+// Invoice # title in the modals
+.load-title-container {
+  text-align: center;
+  background: #0b0d15;
+  padding: 20px;
+  margin-bottom: 2rem;
+  .load-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .load-subtitle {
+    color: #90a3e4;
+    font-size: 0.9rem;
+  }
+  .load-subtitle-pro {
+    color: #dedada;
+    font-size: 0.9rem;
+  }
+  .load-subtitle-customer {
+  }
+}

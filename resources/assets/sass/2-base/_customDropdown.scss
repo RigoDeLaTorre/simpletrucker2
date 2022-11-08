@@ -1,0 +1,130 @@
+#customSortBy {
+  display: none;
+  background: white;
+  color: black;
+  li {
+    cursor: pointer;
+    > div {
+      padding: 20px;
+    }
+  }
+  &.active {
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+    display: block;
+  }
+}
+
+.container1 {
+  position: relative;
+  display: inline-block;
+
+  // z-index: 10000000;
+  // width: 250px;
+  // position: absolute;
+  // background: white;
+  // color: black;
+
+  h4 {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .button1 {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    vertical-align: middle;
+
+    color: white;
+    background: transparent;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    span {
+      letter-spacing: 1px;
+    }
+  }
+
+  .dropdown1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 2;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+
+    // display: block;
+    // width: 250px;
+    // left: 0px;
+    // top: 0px;
+    // height: 350px;
+    // transform-origin: 0px 0px;
+    // opacity: 1;
+    // transform: scaleX(1) scaleY(1);
+  }
+  li {
+    background: #0c1220;
+    text-align: center;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    min-height: 50px;
+    line-height: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  li:hover {
+    background-color: rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+  }
+}
+
+.searchBy,
+.sortBy {
+  .dropdown1 {
+    &__single {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__double {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      span {
+        color: #fff;
+      }
+    }
+  }
+  li {
+    background: #55628c;
+    color: #fff;
+    border-bottom: 1px solid #58699e;
+
+    &:hover {
+      background: #3e4c77;
+      color: white;
+      .customer-tabs__load-length__span {
+        border: 1px solid #96a6ce;
+      }
+    }
+  }
+}

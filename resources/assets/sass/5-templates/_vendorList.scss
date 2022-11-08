@@ -1,0 +1,37 @@
+.vendor-list {
+  .top-section {
+    @media only screen and (max-width: 500px) {
+      position: unset;
+    }
+    .label-group__addItemIcon {
+      @media only screen and (max-width: 1000px) {
+        top: -29px;
+        transform: translateX(60%) !important;
+      }
+      @media only screen and (max-width: 500px) {
+        top: -10px;
+        transform: translateX(46%) !important;
+      }
+    }
+    .paginationSection {
+      // &__groupContainer {
+      //   @media only screen and (max-width: 1000px) {
+      //     position: absolute;
+      //     top: 26px;
+      //     right: 149px;
+      //   }
+      // }
+    }
+    .excel-button {
+      @media only screen and (max-width: 500px) {
+        top: 51px;
+        right: 84px;
+      }
+    }
+    &__filterMobileGroup {
+      @media only screen and (max-width: 500px) {
+        margin: 0 auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+#home {
+  display: flex;
+  background: #1a2035;
+  background: #0e1725;
+  color: white;
+  // height: 100vh;
+  min-height: 100vh;
+  flex: 1;
+  // position: relative;
+  @media only screen and (max-width: $breakpoint-laptop) {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 0.8rem;
+    padding: 1rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}

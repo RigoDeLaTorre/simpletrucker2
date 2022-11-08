@@ -1,0 +1,42 @@
+#expenseAddNewModal,
+#expenseAddNew,
+#expenseRecordEdit {
+  .expenseShowItem {
+    &--hide {
+      display: none;
+    }
+  }
+
+  .container1 {
+    background: orange;
+    position: absolute;
+    top: 130px;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, 0);
+    padding: 0px 9px;
+    box-shadow: $box-shadow;
+    border-radius: 3px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      top: 80px;
+    }
+
+    li {
+      background: #fff;
+      border-bottom: 1px solid #3e4c77;
+      &:hover {
+        background: #3e4c77;
+        color: white;
+      }
+    }
+    .dropdown1 {
+    }
+    .button1 {
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}

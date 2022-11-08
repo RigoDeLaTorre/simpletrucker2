@@ -1,0 +1,110 @@
+.upload-container {
+  margin: 2rem auto;
+}
+
+.pdf-link {
+  // font-weight: 400;
+  // letter-spacing: 2px;
+  // padding: 5px 10px;
+  // border-radius: 5px;
+  // margin-bottom: 0.5rem;
+  // border: 1px solid black;
+  // transition: all ease-in-out 0.3s;
+}
+
+.file-upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+  input[type="file"] {
+    display: none !important;
+  }
+
+  .load-rateconfirmation {
+    margin-right: 1rem;
+  }
+  .upload-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 90px;
+    margin-bottom: 1rem;
+    &__attachment {
+      display: flex;
+      flex: 1;
+      color: #4caf50;
+      align-items: center;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      border: 1px solid black;
+      transition: all ease-in-out 0.3s;
+      &:hover {
+        background: #000000;
+      }
+    }
+    &__attatch-icon {
+      margin-right: 5px;
+    }
+    &__deleteContainer {
+      display: flex;
+    }
+    &__deleteButton {
+      margin-right: 1rem;
+      cursor: pointer;
+      color: #d62b2b;
+      font-size: 1.8rem;
+      &:hover {
+        color: #ff0000;
+      }
+    }
+  }
+  .file-link-name {
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.5px;
+    position: absolute;
+    font-size: 0.8rem;
+    margin: 1rem auto;
+    .blob-url {
+      color: #dd9d28;
+      &:hover {
+        color: #e6ad45;
+      }
+    }
+    .remove-link {
+      color: #f60b0b;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+
+      cursor: pointer;
+      &:hover {
+        color: #f66f6f;
+      }
+    }
+  }
+
+  .custom-file-upload {
+    display: flex !important;
+    align-items: center !important;
+    border: 1px solid rgba(132, 158, 234, 0.25098039215686274) !important;
+    padding: 9px 19px !important;
+    width: 225px;
+    text-align: center;
+    cursor: pointer !important;
+    font-size: 0.8rem;
+    &:hover {
+      background: #5345b8;
+    }
+    .upload-icon {
+      margin-right: 5px;
+    }
+  }
+}

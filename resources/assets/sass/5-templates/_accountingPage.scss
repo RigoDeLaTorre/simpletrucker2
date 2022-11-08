@@ -1,0 +1,170 @@
+#accounting {
+  margin: 0 auto;
+  color: white;
+  max-width: 95%;
+  position: relative;
+  overflow: auto;
+  min-height: 100%;
+}
+
+#accounting-load {
+  // margin: 0 auto;
+  color: white;
+  // max-width: 95%;
+  // position: relative;
+  .tabContainer {
+    // position: relative;
+    // margin-left: 1rem;
+  }
+  .customer-tabs {
+  }
+  .pickupDateSearch {
+    // margin: 0 1rem;
+    text-align: center;
+    input[type="text"] {
+      text-align: center;
+    }
+  }
+  .pickupDateSearch__container {
+    // position: relative;
+    // top: 8px;
+
+    .switch {
+      margin: 0 !important;
+      width: 235px;
+      height: 36px;
+      line-height: 36px;
+      padding: 0 16px;
+    }
+    h2,
+    h4 {
+      text-align: center;
+      margin-right: 1rem;
+    }
+    h2 {
+      margin-top: 1rem;
+    }
+  }
+  .dropdown-triggerSortBy {
+    width: 250px;
+    &__firstPartTitle {
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    &--green {
+      // background: #62ff00;
+      background: #55628c;
+      color: white;
+      transition: $transition;
+      .dropdown-triggerSortBy__firstPartTitle {
+        color: #62ff00;
+      }
+      &:hover {
+        background: #3e4c77;
+        color: white;
+      }
+    }
+    &--purple {
+      // background: #cc00ff;
+      background: #55628c;
+      color: white;
+      transition: $transition;
+
+      .dropdown-triggerSortBy__firstPartTitle {
+        color: #d79ae6;
+      }
+      &:hover {
+        background: #3e4c77;
+        color: white;
+      }
+    }
+    &--gray {
+      // background: #a29999;
+      background: #55628c;
+      color: white;
+      transition: $transition;
+      .dropdown-triggerSortBy__firstPartTitle {
+        color: #1a2841;
+      }
+      &:hover {
+        background: #3e4c77;
+        color: white;
+      }
+    }
+  }
+
+  .top-section {
+    @media only screen and (max-width: 1330px) {
+      position: inherit;
+      display: block;
+    }
+    #accounting-filter-buttons {
+      @media only screen and (max-width: 550px) {
+        // margin: 0 auto;
+        display: none;
+      }
+    }
+    .search-container-navTop {
+      @media only screen and (max-width: 1330px) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .excel-button {
+    @media only screen and (max-width: 1330px) {
+      top: 51px;
+      right: 84px;
+    }
+  }
+  .paginationSection {
+    &__groupContainer {
+      @media only screen and (max-width: 1330px) {
+        position: absolute;
+        top: 26px;
+        right: 149px;
+      }
+    }
+  }
+  .sortBy {
+    @media only screen and (max-width: 1330px) {
+      position: absolute;
+      top: 32px;
+      height: auto;
+      left: 10px;
+    }
+    @media only screen and (max-width: 550px) {
+      position: relative;
+      margin-bottom: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      border-right: none;
+    }
+  }
+  .searchBy {
+    @media only screen and (max-width: 550px) {
+      border-right: none;
+      text-align: center;
+    }
+  }
+
+  .customer-tabs__load-length__span {
+    // background: white;
+  }
+  .rdt {
+    @media only screen and (max-width: 550px) {
+      position: unset;
+    }
+  }
+  .rdtPicker {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: -55px;
+    }
+    @media only screen and (max-width: 550px) {
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, 10px);
+    }
+  }
+}

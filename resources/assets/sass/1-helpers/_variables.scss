@@ -1,0 +1,35 @@
+$background: #1a1f34;
+$backgroundLightTheme: #f3eded;
+$table-background: #1f2740;
+$table-backgroundLightTheme: #fafafa;
+
+$table-text: #8b92a9;
+$table-textLightTheme: #000;
+$modal-light-text: #bec5da;
+$border-bottom: 1px solid rgba(181, 181, 181, 0.1);
+// $border-input-bottom: #9d61f4;
+// $border-input-bottom: #62a6ff;
+$border-input-bottom: #7f64e3;
+$transition: all 0.3s ease-in-out;
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+// ****** MODALS ******
+$modalBackground: #1a1f34;
+$modalTextColor: #8b92a9;
+$modalLineSeperator: #3d466b;
+
+//BREAKPOINTS
+$breakpoint-desktop1600: 1600px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktopPlus1: 1201px;
+$breakpoint-laptop: 950px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 550px;
+
+$generalTextBlackToWhite: #000;
+$generalTextWhiteToBlack: #fff;
+
+.themeLight {
+  $generalTextBlackToWhite: green !important;
+  $generalTextWhiteToBlack: yellow !important;
+}

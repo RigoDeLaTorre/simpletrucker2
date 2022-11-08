@@ -1,0 +1,52 @@
+.credits {
+  width: 100%;
+  box-shadow: $box-shadow;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 10px;
+  // border: 1px solid #4870af;
+  &__addButton {
+    color: orange;
+  }
+  &__add {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  &__ul {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  li {
+    display: inline-block;
+  }
+  &__li {
+    display: inline-block;
+    border: 1px dotted #4d649a;
+  }
+  &__button {
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      height: 2px;
+      background-color: orange;
+      width: 0;
+      transition: width 0.25s;
+    }
+    &:hover::after {
+      content: "";
+      width: 100%;
+    }
+  }
+}

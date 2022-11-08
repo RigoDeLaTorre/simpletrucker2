@@ -1,0 +1,100 @@
+//load section
+.load-filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  // margin: 1rem 0;
+  //added this new
+  // display: inline-block;
+  // position: absolute;
+  // top: 25px;
+  @media only screen and (max-width: $breakpoint-tablet - 1) {
+    // margin: 1rem auto;
+    margin: 0;
+    display: none;
+  }
+  .group-filter {
+    // position: relative;
+    // display: flex;
+    // // margin-left: 2rem;
+    // transition: $transition;
+    // position: relative;
+    // top: -10px;
+    @media only screen and (max-width: $breakpoint-tablet - 1) {
+      // flex-direction: column;
+    }
+  }
+}
+
+.filter-button {
+  width: 190px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #000000 !important;
+  color: #ffffff;
+  font-size: 0.9rem;
+  // margin-right: 1rem;
+  transition: $transition;
+  &--buttonActive {
+    background: #ff9119 !important;
+    color: white;
+  }
+  &--displayNone {
+    @media only screen and (max-width: $breakpoint-tablet - 1) {
+      width: 0 !important;
+      height: 0 !important;
+      padding: 0 !important;
+      opacity: 0 !important;
+    }
+  }
+
+  &:hover {
+    background: #f1d5b6 !important;
+    color: #ffffff !important;
+  }
+  &__checkbox {
+    display: none !important;
+  }
+  &__title {
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1rem;
+    margin: 0 10px !important;
+    letter-spacing: 1px;
+    position: relative;
+    top: 2px;
+  }
+}
+.sub-button {
+  padding: 17px 10px;
+  width: 137px;
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 0.8rem;
+  }
+  &__load-length {
+    &__span {
+      font-size: 0.7rem;
+      border: 1px solid #444d64;
+      display: inline;
+      font-size: 0.8rem;
+      padding: 3px 7px;
+      border-radius: 2px;
+      color: #ffffff;
+    }
+    &__active {
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 0.8rem;
+    }
+    &.not-paid {
+      margin-right: 2.5rem;
+    }
+  }
+}

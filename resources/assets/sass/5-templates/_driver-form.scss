@@ -1,0 +1,49 @@
+#driver-add-new {
+  position: relative;
+}
+#driver-edit {
+  position: relative;
+
+}
+  //Modal - Month/ Year
+
+.driver-form{
+ &__sectionContainer{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   color: white;
+   margin-bottom: 1rem;
+   @media only screen and (max-width: $breakpoint-laptop) {
+     flex-direction: column;
+}
+ }
+ &__group{
+
+   background: #1f2740;
+   padding: 3rem;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+   0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 5px;
+   flex:1;
+
+   &--left{
+
+        margin-right: 2rem;
+        flex:2;
+        @media only screen and (max-width: $breakpoint-laptop) {
+            margin-bottom:1rem;
+        margin-right:0;
+     }
+   }
+
+ }
+ &__formTitle{
+   margin-bottom:3rem;
+   font-size: 1.5rem;
+   margin-bottom: 5rem;
+   letter-spacing: 2px;
+ }
+
+
+}

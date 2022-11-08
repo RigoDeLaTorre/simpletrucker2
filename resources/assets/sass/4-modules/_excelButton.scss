@@ -1,0 +1,32 @@
+.excel-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  top: 24px;
+  right: 84px;
+  @media only screen and (max-width: 550px) {
+    top: 51px;
+    right: 84px;
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+  }
+  &__text {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: $table-text;
+    font-weight: 700;
+    cursor: pointer;
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+    &:hover {
+      color: #28b030;
+    }
+  }
+}

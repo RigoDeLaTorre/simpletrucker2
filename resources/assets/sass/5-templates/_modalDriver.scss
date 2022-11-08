@@ -1,0 +1,99 @@
+.modal-driver {
+  background: $background;
+  @media only screen and (max-width: $breakpoint-desktop1600) {
+    width:80%;
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+width:100%;
+  }
+  .driver-profile {
+    flex: 1;
+  }
+  .modal-content {
+    background: $background;
+    color: $table-text;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .modal-footer {
+    background-color: $background;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    line-height: 1.7;
+    border: 1px solid #1e2e3e;
+    @media only screen and (max-width: $breakpoint-laptop) {
+  flex-direction: column;
+    }
+    .col {
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 2rem 1rem;
+    color: #838baa;
+    text-align: left;
+    background: #2c3453;
+  }
+  &__h4 {
+    display: flex;
+    align-items: center;
+    a {
+      color: $table-text;
+      &:hover {
+        color: #5063aa;
+      }
+    }
+  }
+  &__driverName {
+    font-weight: 900;
+    padding: 20px;
+  }
+  &__addressGroup {
+    font-weight: 300;
+    padding: 20px;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    display: flex;
+  }
+  &__contactGroup {
+    font-weight: 300;
+    padding: 20px;
+    line-height: 3;
+    text-transform: lowercase;
+  }
+  &__material-icons {
+    // width: 24px;
+    // height: 24px;
+    margin-right: 1rem;
+  }
+  &__licenseGroup {
+    font-weight: 300;
+    padding: 20px;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    line-height: 3;
+  }
+  &__hiringSection {
+    flex: 1;
+    border-left: 1px solid #3d466b;
+  }
+  &__svgIcon {
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  &__email {
+  }
+}

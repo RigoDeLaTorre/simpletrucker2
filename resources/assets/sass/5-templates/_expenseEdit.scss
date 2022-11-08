@@ -1,0 +1,10 @@
+.expenseEdit{
+
+  .attachment{
+    display:flex;
+    justify-content: space-between;
+    &__remove{
+      font-size: .8rem;
+    }
+  }
+}

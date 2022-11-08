@@ -1,0 +1,69 @@
+.app-container-driver {
+  background: #f3f3f3;
+  .userName {
+    position: relative;
+    top: 9px;
+    text-transform: capitalize;
+  }
+  .driverUpload {
+    display: block;
+    margin: 0 auto;
+  }
+  .driverLandingPage {
+    // background: #1f2740;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    // background: linear-gradient(#160556, rgba(14,23,37,0.9)),url(/img/auth-background.jpg);
+    // background-position: center center;
+    .driverBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 63px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+      &__link {
+        color: white;
+        display: block;
+        background: #160556;
+        width: 100%;
+        padding: 23px 74px;
+        /* width: 300px; */
+        /* margin: 0; */
+        text-align: center;
+        &:hover {
+          background: #2b1580;
+        }
+        &--top {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+
+    text-align: center;
+    &__link {
+      color: white;
+      padding: 10px 0;
+      // background: #160556;
+
+      flex: 1;
+      &--active {
+        border-bottom: 4px solid #7543eb;
+        color: #d1c2f4;
+      }
+      &:hover {
+        color: #d1c2f4;
+      }
+    }
+  }
+}

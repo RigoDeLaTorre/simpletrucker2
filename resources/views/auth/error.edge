@@ -1,0 +1,36 @@
+@layout('layouts/empty')
+
+@section('title')
+Login-Error
+@endsection
+
+@section('current-class')
+auth-page
+@endsection
+
+
+@section('custom-style-app-container')
+
+@endsection
+
+@section('content')
+
+  <div class="auth-form">
+    <h1>Oops, Somethings out of sync...please click
+      <a href="#" onClick="(function(){
+location.reload(true)
+
+})();">click here</a>
+ to refresh </h1>
+
+
+
+
+  </div>
+  <div class="side-image">
+
+  </div>
+
+
+
+@endsection

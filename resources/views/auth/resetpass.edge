@@ -1,0 +1,79 @@
+@layout('layouts/empty')
+
+@section('title')
+Register
+@endsection
+
+@section('current-class')
+auth-page
+@endsection
+
+
+@section('custom-style-app-container')
+
+@endsection
+
+@section('content')
+
+  <div class="auth-form">
+    <h1>Reset Password</h1>
+    <form class="default-form" action="/password/reset" method="post">
+      {{ csrfField() }}
+      <input type ="hidden" name="token" value ="{{token}}">
+      <div class="error-box
+      @if(flashMessage('notification'))
+      active
+
+      @if(flashMessage('notification.type') =='danger')
+      danger
+      @else
+      success
+      @endif
+
+      @endif
+      ">
+      @if(flashMessage('notification'))
+        {{flashMessage('notification.message')}}
+      @endif
+      </div>
+
+
+    <div class="input-field col s6">
+        <label for="email">Email: </label>
+        <input type="text" name="email" value="{{ old('email', '') }}" class="text
+        @if(hasErrorFor('email'))
+          error
+        @endif
+        ">
+      </div>
+      <div class="input-field col s6">
+        <label for="password">New Password: </label>
+        <input type="password" name="password" value="" class="text
+        @if(hasErrorFor('password'))
+          error
+        @endif
+        ">
+      </div>
+      <div class="input-field col s6">
+        <label for="password_confirmation">Confirm Password: </label>
+        <input type="password" name="password_confirmation" value="" class="text
+        @if(hasErrorFor('password_confirmation'))
+        error
+        @endif
+        ">
+      </div>
+    <div class="input-field col s6">
+        <button type="submit" class="reset-pass" onclick="handleResetPw()">Reset Pass</button>
+      </div>
+      <hr>
+      <a href="/login">Back to Login</a>
+    </form>
+
+  </div>
+  <div class="side-image">
+
+  </div>
+
+
+
+@endsection

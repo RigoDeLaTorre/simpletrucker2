@@ -1,0 +1,24 @@
+.collapsible {
+  &__desktopNav {
+    border: none;
+    box-shadow: none;
+  }
+}
+.collapsibleBody {
+  &__desktopNav {
+    border-bottom: 1px solid #4164de;
+    padding: 1rem 0;
+  }
+}
+
+.collapsibleHeader {
+  &__desktopNav {
+    color: white;
+    border-bottom: 0;
+    margin: 1px;
+    background: transparent;
+  }
+  &--marginTop2 {
+    margin-top: 2rem;
+  }
+}

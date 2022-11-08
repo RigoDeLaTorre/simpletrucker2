@@ -1,0 +1,158 @@
+// .label--themeLight {
+//   color: #4e4848 !important;
+// }
+// input {
+//   &.themeLight {
+//     color: #000 !important;
+//   }
+// }
+.themeLight {
+  .topNavBar__nav {
+    background: #f7f7f7 !important;
+    .top-section__labelContainer__label,
+    .topNavBar__icon,
+    .topNavBar__sectionTitle,
+    input,
+    select {
+      color: #000 !important;
+    }
+  }
+  .modal-content,
+  .app-container {
+    // background: $backgroundLightTheme !important;
+    background: #f7f7f7 !important;
+    color: $table-textLightTheme !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    label,
+    input,
+    select,
+    textarea,
+    .group-search__label,
+    .modal-driver__material-icons,
+    .modal-driver__contactInfo,
+    .paginationSection__button,
+    .react-tabs__tab,
+    .display-table__container,
+    .display-table__th,
+    .group-remove__link {
+      color: #000 !important;
+    }
+    h5 {
+      &.filter-button__title {
+        color: white !important;
+      }
+    }
+    h4 {
+      &.modal__topBar__text {
+        color: #fff !important;
+      }
+      &.paginationSection__bottomText {
+        // color:white !important;
+      }
+      &.excel-button__text {
+        cursor: pointer;
+        color: green !important;
+        &:hover {
+          color: #12ce12 !important;
+        }
+      }
+
+      // label for the top left hand react-select
+      &.top-section__labelContainer__label {
+        color: #000 !important;
+      }
+    }
+    .filter-button-container {
+      h5 {
+        color: #fff !important;
+      }
+    }
+
+    .load-form,
+    .form__section,
+    .form__group,
+    .modal-driver__container,
+    .driver-form__group,
+    .payContainer,
+    .display-table__container,
+    .display-table__th,
+    textarea,
+    .load-item,
+    .load-form-section__topGroup,
+    .textarea {
+      background: #fff !important;
+    }
+    .custom-file-upload:hover {
+      background: #cbc0e8;
+    }
+    // TOP NAV SECTION
+    .top-section {
+      background: #f7f7f7 !important;
+      .dropdown-triggerSearchBy,
+      .dropdown-triggerSortBy {
+        color: black !important;
+      }
+    }
+    .top-section__labelContainer__label,
+    .react-tabs__tab--selected,
+    .group-remove__numberText {
+      color: #fff !important;
+    }
+
+    textarea {
+      border: 1px solid rgba(12, 18, 32, 0.19) !important;
+    }
+    .modal-footer,
+    .modal-driver__title,
+    .load-title-container,
+    .load-details__leftContainer {
+      background: #f2eded !important;
+    }
+    .form__modal-fileAttachment--remove-link::after,
+    .form__modal-fileAttachment--url::after {
+      background-color: #1f2740 !important;
+    }
+
+    .load-details__mileage__listItem {
+      background: #e0dada;
+    }
+
+    .modal-trigger {
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        background: #e2dcdc !important;
+      }
+    }
+
+    .licenseExpire {
+      color: white;
+      background: red !important;
+      padding: 10px;
+    }
+
+    // END OF THE INSDIE CONTAINER
+    &.reports-home {
+      background: #ffffff !important;
+    }
+    .button1 {
+      color: #000 !important;
+    }
+  }
+  .tabs {
+    a {
+      color: #000 !important;
+    }
+  }
+  .pickup-delivery-section,
+  .generalBackgroundColor {
+    background: #f3f3f3 !important;
+  }
+}
+
+//expense Alert bar section

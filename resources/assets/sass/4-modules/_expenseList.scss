@@ -1,0 +1,37 @@
+.expense-list {
+  .top-section {
+    @media only screen and (max-width: 1000px) {
+      position: unset;
+    }
+    .paginationSection {
+      &__groupContainer {
+        @media only screen and (max-width: 1000px) {
+          position: absolute;
+          top: 26px;
+          right: 149px;
+        }
+      }
+    }
+    .excel-button {
+      @media only screen and (max-width: 1000px) {
+        top: 51px;
+        right: 84px;
+      }
+    }
+    &__filterMobileGroup {
+      @media only screen and (max-width: 1000px) {
+        margin: 0 auto;
+      }
+    }
+  }
+  &--subcategory {
+    .top-section a.label-group__addItemIcon {
+      @media only screen and (max-width: 1000px) {
+        transform: translateX(89%) !important;
+      }
+      @media only screen and (max-width: 500px) {
+        transform: translateX(60%) !important;
+      }
+    }
+  }
+}

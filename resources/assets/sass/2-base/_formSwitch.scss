@@ -1,0 +1,15 @@
+.switch {
+  margin-top: 2rem;
+  label {
+    color: #ffffff;
+  }
+  .lever {
+    background-color: #adc6e6 !important;
+  }
+  input[type='checkbox']:checked + .lever {
+    background-color: #62a6ff !important;
+  }
+  input[type='checkbox']:checked + :after {
+    background-color: #62a6ff !important;
+  }
+}

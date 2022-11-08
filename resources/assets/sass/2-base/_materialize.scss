@@ -1,0 +1,89 @@
+.material-icons {
+  &--marginRight {
+    margin-right: 1rem;
+  }
+  &__checkbox {
+    cursor: pointer;
+    color: #b388ff;
+  }
+  &__active {
+    color: orange;
+  }
+  &__hover {
+    cursor: pointer;
+
+    &:hover {
+      color: black !important;
+    }
+  }
+  &__printIcon {
+    position: absolute;
+    top: 44px;
+    right: 84px;
+    transition: $transition;
+    &:hover {
+      color: orange;
+    }
+  }
+}
+
+.modal-footer {
+  background-color: #1a1f34 !important;
+}
+
+#toast-container {
+  // background: transparent !important;
+  .materialize {
+    &__toastError {
+      background: red;
+    }
+    &__toastSuccess {
+      background: green;
+    }
+    &__toastUpdated {
+      background: orange;
+    }
+  }
+}
+.modal {
+  &.overflowAutoVendor {
+    overflow: visible !important;
+    @media only screen and (max-width: $breakpoint-laptop) {
+      overflow: auto !important;
+    }
+  }
+  &.overflowAutoSubCategory {
+    overflow: visible !important;
+    @media only screen and (max-width: $breakpoint-laptop) {
+      overflow: auto !important;
+    }
+  }
+  &.overflowAutoCategory {
+    overflow: visible !important;
+    @media only screen and (max-width: $breakpoint-laptop) {
+      overflow: auto !important;
+    }
+  }
+}
+#dropdownSortBy {
+  background: rgb(243, 243, 243);
+  border-radius: 5px;
+  li {
+    background: white;
+    text-align: center;
+    border-radius: 5px;
+    &:hover {
+      background: #fdc830; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #f37335,
+        #fdc830
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f37335, #fdc830);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      span {
+        color: white;
+      }
+    }
+  }
+}

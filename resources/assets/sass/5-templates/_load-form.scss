@@ -1,0 +1,162 @@
+.load-form-container {
+  // margin: 0 auto;
+  // color: white;
+  // max-width: 95%;
+  // position: relative;
+  .pdf-link {
+    width: 100%;
+  }
+
+  // Invoice title ..ex  Invoice #2234
+  .invoice-number {
+    margin: 2rem auto;
+    &__id {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      position: absolute;
+      top: -80px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .load-fields-container {
+    .form {
+      // max-width: 80%;
+      // margin: 0 auto;
+      .load-form-section {
+        // @media only screen and (max-width: $breakpoint-mobile) {
+        //   flex-direction: column;
+        // }
+        &__topGroup {
+          box-shadow: $box-shadow;
+          background: $table-background;
+          padding: 25px;
+          border: $border-bottom;
+
+          &__group {
+            padding: 3rem 0 !important;
+            // background: $table-background;
+          }
+        }
+        &__topGroupAccounting {
+          display: flex;
+          box-shadow: $box-shadow;
+          border: $border-bottom;
+          flex-flow: row wrap;
+          padding: 1rem;
+          input {
+            // margin: 1rem auto !important;
+          }
+          &__title {
+            color: #75a3f4;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+          &__group {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            margin-right: 2rem;
+            min-width: 300px;
+
+            // padding: 3rem 0 !important;
+            // background: $table-background;
+          }
+        }
+        .load-notes-section {
+          display: flex;
+          flex-direction: row;
+          @media only screen and (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .pickup-delivery-section {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      flex-direction: column;
+    }
+    &.pickups {
+      margin-right: 2.5rem;
+    }
+  }
+
+  .pickup-delivery-container {
+    color: white;
+    margin-bottom: 1rem;
+    width: 100%; // keep this or not ?
+
+    .poNumber {
+      position: absolute;
+      top: 15px;
+      left: 300px;
+    }
+    &.right-side {
+      margin-left: 1rem;
+      @media only screen and (max-width: $breakpoint-desktop1600) {
+        margin-left: 0;
+      }
+    }
+  }
+  .deleteLoad {
+    text-align: center;
+
+    .deleteLoad__button {
+      display: inline-block;
+      background: #fbfbfb;
+      padding: 15px 50px;
+      color: red;
+      border: 1px solid red;
+      margin: 1rem 0;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        background: red;
+        color: white !important;
+      }
+    }
+  }
+}
+
+//ACCOUNTING DRIVERS PAY MODAL
+.payContainer {
+  background: #2b3453;
+  box-shadow: $box-shadow;
+  padding: 25px;
+  border-radius: 5px;
+}
+.load-form-section {
+  &__topGroup {
+    &__group {
+      &--driverPaySection {
+        display: flex;
+        color: white;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      &__flexColumn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__h4 {
+          margin-right: 1rem;
+          color: white;
+          font-weight: 300;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.expenseFilterContainer{
+    display:flex;
+    justify-content:space-between;
+    .selectFilterGroup{
+      display:flex;
+      align-items: center;
+      &__label{
+        margin-right:1rem;
+      }
+    }
+}

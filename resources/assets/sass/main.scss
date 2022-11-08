@@ -1,0 +1,71 @@
+@import "1-helpers/1-helpers";
+@import "0-plugins/0-plugins";
+@import "2-base/2-base";
+@import "3-layout/3-layout";
+@import "4-modules/4-modules";
+@import "5-templates/5-templates";
+@import "6-userLayout/6-userLayout";
+@import "7-themes/7-themes";
+
+// @import "../node_modules/react-datepicker/dist/react-datepicker.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Shrikhand");
+
+//Accounting
+@import "pages/accounting/accountingHome";
+
+//Reports
+@import "pages/reports/index";
+
+* {
+  -webkit-box-sizing: border-box !important;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box !important;
+  /* Firefox, other Gecko */
+  box-sizing: border-box !important;
+  /* Opera/IE 8+ */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #0e1725;
+  font-family: "Roboto", sans-serif;
+
+  min-height: 100%;
+  overflow-y: scroll !important;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+.text-help {
+  color: white;
+}
+
+//select-dropdown
+// Datepicker Materialize
+
+//Materialize Select dropdowns
+
+.switch {
+  margin-top: 2rem;
+  label {
+    color: #ffffff;
+  }
+  .lever {
+    background-color: #adc6e6 !important;
+  }
+  input[type="checkbox"]:checked + .lever {
+    background-color: #62a6ff !important;
+  }
+  input[type="checkbox"]:checked + :after {
+    background-color: #62a6ff !important;
+  }
+}

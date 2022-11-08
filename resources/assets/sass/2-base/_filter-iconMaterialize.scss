@@ -1,0 +1,21 @@
+.load-list__filter {
+  display: inline-flex;
+  flex-direction: column;
+  &__material-icons {
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #55638f;
+    }
+    &--desc {
+      position: relative;
+      top: -10px;
+      cursor: pointer;
+    }
+    &--asc {
+      position: relative;
+      top: 6px;
+      cursor: pointer;
+    }
+  }
+}

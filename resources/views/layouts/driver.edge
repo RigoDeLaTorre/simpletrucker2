@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    @!section('title')
+  </title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137384350-1"></script>
+<script>
+window.dataLayer = window.dataLayer || []
+function gtag() {
+  dataLayer.push(arguments)
+}
+gtag('js', new Date())
+gtag('config', 'UA-137384350-1')
+</script>
+
+
+</head>
+<body>
+
+  <div class="app-container-driver
+
+    @!section('current-class')
+      " style ="
+      @!section('custom-style-app-container')
+      ">
+
+      <div class="topNavBars">
+
+        <ul id="dropdown1" class="dropdown-content">
+          <li>
+            <a href="/profile" class="topNavBar__link">Profile</a>
+          </li>
+          <li>
+          <a href="/settings" class="topNavBar__link">
+            Settings
+          </a>
+          </li>
+          <li class="divider" />
+          <li>
+            <div class="user-group">
+              <a class="topNavBar__logout" href="/logout">
+                logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <nav
+          class="topNavBar__nav topNavBar__nav--height100">
+          <div class="nav-wrapper">
+            <ul class="topNavBar__accountIcon right">
+              <li class="userName">{{firstName}} {{lastName}}</li>
+              <li>
+                <a
+                  class="dropdown-trigger"
+                  href="#!"
+                  data-target="dropdown1">
+                  <i class="material-icons topNavBar__icon">
+                    account_circle
+                  </i>
+                </a>
+              </li>
+
+            </ul>
+            <div class="nav">
+              <a class="nav__link nav__link--top {{ request.match('/driver/active') || request.match('/home') ? 'nav__link--active':'' }} " href="/driver/active">Active</a>
+              <a class="nav__link {{ request.match('/driver/delivered') ? 'nav__link--active':'' }} " href="/driver/delivered">Delivered</a>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+
+
+
+
+
+
+    @!section('content')
+
+    </div>
+    <!-- <script src="../../node_modules/materialize-css/dist/js/materialize.min.js" charset="utf-8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.dropdown-trigger')
+  var instances = M.Dropdown.init(elems)
+})
+function hasGetUserMedia() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
+}
+
+if (hasGetUserMedia()) {
+  // Good to go!
+} else {
+  alert('getUserMedia() is not supported by your browser')
+}
+
+const constraints = {
+  video: true
+}
+
+const video = document.querySelector('video')
+
+navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+  video.srcObject = stream
+})
+</script>
+</body>
+</html>

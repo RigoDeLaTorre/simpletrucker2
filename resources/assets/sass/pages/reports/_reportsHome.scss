@@ -1,0 +1,150 @@
+#reports-home {
+  margin: 0 auto;
+  color: white;
+  width: 100%;
+  overflow: auto;
+
+  .customer-list-report {
+    min-height: 100vh;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 3;
+    border-radius: 5px;
+    .load-overview {
+      display: flex;
+      justify-content: space-between;
+      text-transform: capitalize;
+      margin: 2rem auto;
+    }
+    .table-container {
+      background: #1f2840;
+      .table-headers {
+        border-bottom: 1px solid rgba(181, 181, 181, 0.1);
+        .tr-customer {
+          th {
+            padding: 25px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: white;
+          }
+        }
+      }
+      .list-items {
+        line-height: 1.7;
+
+        text-transform: capitalize;
+        .tr {
+          border-bottom: 1px solid rgba(181, 181, 181, 0.1);
+          &:hover {
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            background: #313d62 !important;
+          }
+
+          td {
+            padding: 10px 25px;
+            color: #8b92a9;
+            font-weight: 300;
+            font-size: 1rem;
+            vertical-align: middle;
+            h3 {
+              font-weight: 500;
+              font-size: 1rem;
+              color: #b3b6be;
+            }
+            h4 {
+              font-size: 1rem;
+
+              font-weight: 300;
+            }
+            h5 {
+              font-size: 0.8rem;
+
+              font-weight: 400;
+            }
+            &.driver {
+              // vertical-align: middle;
+              .driver-container {
+                display: flex;
+                flex-direction: column;
+
+                .driver-img {
+                  width: 50px;
+                  height: 50px;
+                  margin-right: 1rem;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                  }
+                }
+                .driver-name {
+                  position: relative;
+                  left: 10px;
+                }
+              }
+            }
+            &.dropoff,
+            &.pickup {
+              h3 {
+                font-weight: 500;
+                font-size: 1rem;
+              }
+              h4 {
+                font-size: 1rem;
+
+                font-weight: 300;
+              }
+              h5 {
+                font-size: 0.8rem;
+
+                font-weight: 400;
+              }
+            }
+            &.pickup-details {
+              .arrow-img {
+                width: 20px;
+              }
+              h4 {
+                font-size: 0.9rem;
+                font-weight: 400;
+              }
+              h5 {
+                font-size: 0.7rem;
+
+                font-weight: 400;
+              }
+            }
+          }
+
+          .customer-name {
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+  // MODAL CONTAINER
+}
+span {
+  display: inline-flex;
+  flex-direction: column;
+  .material-icons {
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #55638f;
+    }
+    &.desc {
+      position: relative;
+      top: -10px;
+      cursor: pointer;
+    }
+    &.asc {
+      position: relative;
+      top: 6px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.right-home-container {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.linkWithMaterializeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.permanentlyDeleteModal {
+  background: #e94a4a;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition;
+  &:hover {
+    background: red;
+  }
+}
+
+.deleteLoad {
+  text-align: center;
+
+  .deleteLoad__button {
+    display: inline-block;
+    background: #fbfbfb;
+    padding: 15px 50px;
+    color: red;
+    border: 1px solid red;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+      background: red;
+      color: white !important;
+    }
+  }
+}

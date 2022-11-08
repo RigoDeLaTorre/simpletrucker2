@@ -1,0 +1,162 @@
+
+@layout('layouts/user')
+
+@section('title')
+Register
+@endsection
+
+@section('current-class')
+auth-page-driverShow
+@endsection
+
+@section('notifications')
+<div class="notifications
+@if(flashMessage('notification'))
+active
+@endif
+">
+@if(flashMessage('notification'))
+  {{flashMessage('notification')}}
+@endif
+
+</div>
+@endsection
+@section('companyName')
+{{companyName}}
+@endsection
+
+@section('right-home-container')
+
+@endsection
+
+@section('content')
+
+<select class ="driverformSelect driverformSelect__search" onchange="handleDriverChange(event)">.
+  <option value="all">All</option>
+  @each(dr in drivers)
+  <option class="driverformSelect__option" value="{{dr.driver_first_name}}{{dr.driver_last_name}}">{{dr.driver_first_name}} {{dr.driver_last_name}}</option>
+  @endeach
+</select>
+<div class="display-table">
+<table class="table-container responsive-table display-table__container">
+  <thead class="display-table__thead">
+  <tr class="tr-customer">
+      <th class="row-header display-table__th">First Name</th>
+      <th class="row-header display-table__th">Last Name</th>
+      <th class="row-header display-table__th">Email</th>
+      <th class="row-header display-table__th">Register</th>
+      <th class="row-header display-table__th">Access</th>
+
+  </tr>
+</thead>
+<tbody id="list" class="display-table__list-items">
+
+@each(dr in drivers)
+<tr class="modal-trigger modal-trigger--noPointer">
+  <td class="cell modal-trigger__td">{{ dr.driver_first_name }}</td>
+  <td class="cell modal-trigger__td">{{ dr.driver_last_name }}</td>
+  <td class="cell modal-trigger__td">{{ dr.driver_email }}</td>
+
+  <td class="cell modal-trigger__td showDrivers__register">
+      @if(dr.user==null && dr.driver_email ==null)
+          <a class="modal-trigger__updateDriverEmail" href="/driver/updateEmail/{{dr.id}}/{{dr.driver_first_name}}/{{dr.driver_last_name}}">Please update driver email <i class="material-icons showDrivers__material-icons showDrivers__material-icons--red">email</i></a>
+         {{-- <a class="modal-trigger" data-id={{dr.id}} data-firstName="{{dr.driver_first_name}}" data-lastName="{{dr.driver_last_name}}" data-phone="{{dr.driver_phone}}" href="#modal1">    Please update driver email <i class="material-icons showDrivers__material-icons showDrivers__material-icons--red">email</i></a> --}}
+      @elseif(dr.user ==null)
+      <a class="modal-trigger__createDriverLink" href="/driver/adduser/{{dr.id}}/{{dr.driver_first_name}}">Create Driver Login</a>
+    @else
+      Registered <i class="material-icons showDrivers__material-icons showDrivers__material-icons--green">check</i>
+    @endif
+  </td>
+  <td class="cell modal-trigger__td">
+    <form method="POST" class="default-form auth-form-driver__form" action="/api/updateDriverPatch?_method=PUT">
+        {{ csrfField() }}
+      <input type="hidden" name="id" value="{{ dr.id }}" class="text">
+    <div class="driverupdate-container">
+      <div class="input-field col s12 auth-form-driver__field">
+        <select class ="driverformSelect
+          @if(dr.user_access)
+          driverformSelect--active
+          @else
+          driverformSelect--notactive
+          @endif
+        " name="user_access">
+          <option selected="selected" value={{dr.user_access}}>
+          @if(dr.user_access)
+          Active
+          @else
+          De-activated
+          @endif
+          </option>
+          <option value="1">Active</option>
+          <option value="0">De-activated</option>
+        </select>
+      </div>
+      @if(dr.user==null)
+      @else
+
+      <button class="driverformSelect__button" type="submit">Update</button>
+      @endif
+    </div>
+</form>
+  </td>
+</tr>
+
+@endeach
+
+</tbody>
+</table>
+<div id="modal1" class="modal">
+   <div class="modal-content">
+     <h4 id="modal__driverName" class="modal__driverName">Modal Header</h4>
+     <h4 id="modal__driverPhone" class="modal__driverPhone">Phone</h4>
+     <form method="POST" class="auth-form-driver__form" action="/api/updateDriverPatch?_method=PUT">
+         {{ csrfField() }}
+         <input id="id" type="hidden" name="id" value="" class="text">
+         <div class="input-field col s6 modal__driverEmailContainer">
+          <input id="driver_email" type="email" name="driver_email" class="validate">
+          <label for="driver_email">Email</label>
+        </div>
+        <button class="btn waves-effect waves-light green right" type="submit">Update
+      <i class="material-icons right">send</i>
+    </button>
+       </form>
+   </div>
+   <div class="modal-footer">
+
+
+   </div>
+ </div>
+</div>
+
+<script>
+search=()=>{
+
+
+
+}
+handleDriverChange=(event)=>{
+  let search = event.target.value
+  let list = document.getElementById("list")
+  let items = list.getElementsByTagName("tr")
+
+  for (i = 0; i < items.length; i++) {
+     firstName = items[i].getElementsByTagName("td")[0];
+     lastName = items[i].getElementsByTagName("td")[1];
+     firstNameValue = firstName.textContent || firstName.innerText;
+
+     lastNameValue = lastName.textContent || lastName.innerText;
+
+     if(search==="all"){
+          items[i].style.display = "";
+     }
+     else if(firstNameValue+lastNameValue==search){
+     items[i].style.display = "";
+   }else{
+     items[i].style.display = "none";
+     }
+
+   }
+}
+</script>
+
+@endsection

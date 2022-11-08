@@ -1,0 +1,30 @@
+@import 'auth';
+@import 'topNav';
+@import 'nav';
+@import 'home';
+@import 'loginWelcome';
+@import 'welcome';
+@import 'topNavBar';
+@import 'driverLogin';
+@import 'accountingEditLoad';
+
+.app-container {
+  margin: 0 auto;
+  color: white;
+  height: 100%;
+  min-height: 100vh;
+  &--themeLight {
+    background: #f3eded !important;
+  }
+  // max-width: 95%; // original 90%
+  // position: relative;
+  @media only screen and (max-width: $breakpoint-desktop) {
+    max-width: 100%;
+  }
+}
+
+.haha {
+  background: red;
+  padding: 25px;
+  color: white;
+}

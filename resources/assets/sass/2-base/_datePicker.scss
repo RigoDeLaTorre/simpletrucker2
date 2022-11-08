@@ -1,0 +1,37 @@
+.datepicker-container {
+  color: #000000 !important;
+  z-index: 100000000;
+}
+
+.datepicker-calendar-container {
+  background: #ffffff !important;
+  .selects-container {
+    .dropdown-trigger {
+      color: #000000 !important;
+    }
+  }
+}
+.datepicker-date-display {
+  background-color: #1f2640 !important;
+}
+.is-today {
+  color: #000000 !important;
+  background: #e8e9ec;
+}
+.is-selected {
+  background-color: #1f2640 !important;
+}
+.datepicker-cancel {
+  color: #4d5679 !important;
+}
+.datepicker-done {
+  color: #4d5679 !important;
+}
+
+.select-dropdown {
+  li {
+    span {
+      color: #000000 !important;
+    }
+  }
+}

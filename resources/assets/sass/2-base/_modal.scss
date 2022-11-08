@@ -1,0 +1,26 @@
+.modal {
+  &__editButton {
+    &--width100 {
+      width: 100%;
+      margin: 1rem auto;
+    }
+  }
+  &__saveButton {
+    &--width100 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto;
+    }
+  }
+  &__updateButton {
+    &--width100 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem auto;
+    }
+  }
+}

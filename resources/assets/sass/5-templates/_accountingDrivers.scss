@@ -1,0 +1,22 @@
+.accountingDrivers{
+  .driversPayButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    cursor:pointer;
+
+    &__loadSelected{
+      margin-right:2rem;
+
+      &__list{
+        margin-top:.5rem;
+      }
+      &__listItem{
+        margin-right:.5rem;
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,103 @@
+@layout('layouts/empty')
+
+@section('title')
+Register
+@endsection
+
+@section('current-class')
+auth-page
+@endsection
+
+
+@section('custom-style-app-container')
+
+@endsection
+
+@section('content')
+<ul>
+@each(dr in drivers)
+<div class="auth-form-driver">
+  <h1>Sign up Driver {{name}}</h1>
+  <form class="default-form" action="/register" method="post">
+    {{ csrfField() }}
+    <div class="error-box
+    @if(hasErrorFor('email') || hasErrorFor('password') || hasErrorFor('first_name') || hasErrorFor('last_name'))
+    active
+    @endif
+    ">
+    @if(hasErrorFor('first_name'))
+    {{ getErrorFor('first_name')}}
+    @endif
+
+    @if(hasErrorFor('last_name'))
+    {{ getErrorFor('last_name')}}
+    @endif
+
+    @if(hasErrorFor('email'))
+    {{ getErrorFor('email')}}
+    @endif
+
+    @if(hasErrorFor('password'))
+    {{ getErrorFor('password')}}
+    @endif
+    @if(hasErrorFor('database'))
+    {{ getErrorFor('database')}}
+    @endif
+
+    </div>
+  <div class="input-field col s6">
+      <h4 for="first_name">{{ dr.driver_first_name }} </h4>
+      <input type="hidden" name="first_name" value="{{ dr.driver_first_name }}" class="text
+      @if(hasErrorFor('first_name'))
+        error
+      @endif
+      ">
+    </div>
+    <div class="input-field col s6">
+      <h4 for="last_name">{{dr.driver_last_name}}</h4>
+      <input type="hidden" name="last_name" value="{{ dr.driver_last_name }}" class="text
+      @if(hasErrorFor('last_name'))
+        error
+      @endif
+      ">
+    </div>
+  <div class="input-field col s6">
+      <label for="email">{{ dr.driver_email }}</label>
+      <input type="hidden" name="email" value="{{ dr.driver_email }}" class="text
+      @if(hasErrorFor('email'))
+        error
+      @endif
+      ">
+    </div>
+    <div class="input-field col s6">
+      <label for="password">Password: </label>
+      <input type="password" name="password" value="" class="text
+      @if(hasErrorFor('password'))
+        error
+      @endif
+      ">
+    </div>
+    <div class="input-field col s6">
+      <label for="confirm_password">Confirm Password: </label>
+      <input type="password" name="confirm_password" value="" class="text
+      @if(hasErrorFor('confirm_password'))
+      error
+      @endif
+      ">
+    </div>
+  <div class="input-field col s6">
+      <button type="submit">Register</button>
+    </div>
+    <hr>
+    <a href="/login">Back to Login</a>
+  </form>
+
+</div>
+@endeach
+</ul>
+
+
+
+
+
+@endsection

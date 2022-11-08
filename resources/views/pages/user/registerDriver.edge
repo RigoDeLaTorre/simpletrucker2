@@ -1,0 +1,92 @@
+@layout('layouts/user')
+
+@section('title')
+Register
+@endsection
+
+
+
+
+@section('right-home-container')
+
+@endsection
+
+@section('content')
+  <a class="back-link" href="/driver/showDrivers">Back to Drivers</a>
+<ul>
+
+<div class="auth-form-driver">
+
+  <form class="default-form auth-form-driver__form" action="/registerDriver" method="post">
+    {{ csrfField() }}
+    <div class="error-box
+    @if(hasErrorFor('email') || hasErrorFor('password') || hasErrorFor('first_name') || hasErrorFor('last_name'))
+    active
+    @endif
+    ">
+    @if(hasErrorFor('first_name'))
+    {{ getErrorFor('first_name')}}
+    @endif
+
+    @if(hasErrorFor('last_name'))
+    {{ getErrorFor('last_name')}}
+    @endif
+
+    @if(hasErrorFor('email'))
+    {{ getErrorFor('email')}}
+    @endif
+
+    @if(hasErrorFor('password'))
+    {{ getErrorFor('password')}}
+    @endif
+    @if(hasErrorFor('database'))
+    {{ getErrorFor('database')}}
+    @endif
+
+    </div>
+  <div class="auth-form-driver__field">
+      <h4 class="auth-form-driver__name">{{ first_name }} {{last_name}}</h4>
+      <input type="hidden" name="first_name" value="{{ first_name }}" class="text">
+      <input type="hidden" name="last_name" value="{{ last_name }}" class="text">
+        <input type="hidden" name="driver_id" value="{{ id }}" class="text">
+    </div>
+
+  <div class="auth-form-driver__field">
+      <h4 class="auth-form-driver__email">{{ email }}</h4>
+      <input type="hidden" name="email" value="{{ email }}" class="text">
+    </div>
+    <div class="auth-form-driver__inputbox">
+    <div class="input-field col s12 auth-form-driver__field">
+      <label for="password">Password: </label>
+      <input type="password" name="password" value="" class="text
+      @if(hasErrorFor('password'))
+        error
+      @endif
+      ">
+    </div>
+    </div>
+      <div class="auth-form-driver__inputbox">
+    <div class="input-field col s12 auth-form-driver__field">
+      <label for="confirm_password">Confirm Password: </label>
+      <input type="password" name="confirm_password" value="" class="text
+      @if(hasErrorFor('confirm_password'))
+      error
+      @endif
+      ">
+    </div>
+    </div>
+  <div class="input-field col s12 auth-form-driver__field">
+      <button type="submit">Add Driver Login</button>
+    </div>
+    <hr>
+
+  </form>
+
+</div>
+</ul>
+
+
+
+
+
+@endsection

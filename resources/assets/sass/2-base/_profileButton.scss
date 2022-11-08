@@ -1,0 +1,30 @@
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 18px;
+  background: white;
+  z-index: 10;
+  border-radius: 5px;
+  li {
+    border-bottom: 1px solid #1f2740;
+    cursor: pointer;
+    float: none !important;
+    &:hover {
+      background: #3e4c77;
+      color: white !important;
+    }
+
+    &:last-child {
+      background: #a00d42;
+
+      a {
+        color: white !important;
+        padding: 20px;
+      }
+    }
+    .topNavBar__link {
+      display: flex;
+      padding: 20px;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+#accounting-filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  // margin:1rem 0;
+
+  .group-filter {
+    display: flex;
+    margin-left: 1rem;
+  }
+
+  .filter-button-container {
+    // width: 190px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000000 !important;
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 23px 10px !important;
+    margin-right: 1rem;
+    &.customer-past-loads {
+      padding: 17px 10px !important;
+      // width: 137px;
+
+      h5 {
+        font-size: 0.8rem;
+      }
+    }
+    &.marginLeft {
+      margin-left: 1rem;
+    }
+    &.buttonActive {
+      // background: #405EB2 !important;
+      // color:white;
+      background: #ff9119 !important;
+      color: white;
+    }
+    & &:hover {
+      background: #000000 !important;
+      color: #ffffff !important;
+    }
+    .filter-check {
+      display: none;
+      cursor: pointer;
+      height: 35px;
+
+      .filter-box {
+        font-size: 1.5rem !important;
+        &.active {
+          color: #62a6ff;
+        }
+      }
+    }
+    h5 {
+      font-weight: 400;
+      text-transform: capitalize;
+      font-size: 1rem;
+      margin: 0 10px !important;
+      letter-spacing: 1px;
+      position: relative;
+      top: 2px;
+    }
+    .load-length {
+      &__span {
+        font-size: 0.7rem;
+        border: 1px solid #444d64;
+        display: inline;
+        font-size: 0.8rem;
+        padding: 3px 7px;
+        border-radius: 2px;
+        color: #ffffff;
+      }
+      &__active {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+      &.not-paid {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+}
+
+.sub-group {
+  display: flex;
+  flex-direction: column;
+
+  .button-group {
+    display: none;
+    &.active {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .filter-button-container {
+      // width: 200px;
+      padding: 20px 20px;
+    }
+  }
+}

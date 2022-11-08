@@ -1,0 +1,40 @@
+
+@layout('layouts/user')
+
+@section('title')
+Register
+@endsection
+
+@section('current-class')
+auth-page-driverShow
+@endsection
+
+@section('notifications')
+<div class="notifications
+@if(flashMessage('notification'))
+active
+@endif
+">
+@if(flashMessage('notification'))
+  {{flashMessage('notification')}}
+@endif
+
+</div>
+@endsection
+@section('companyName')
+{{-- {{companyName}} --}}
+@endsection
+
+@section('right-home-container')
+
+@endsection
+
+@section('content')
+<section>
+<h1>You are out of credits, please add credits to your account</h1>
+</section>
+
+
+
+
+@endsection

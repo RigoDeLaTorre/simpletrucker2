@@ -1,0 +1,74 @@
+.alertBar{
+    background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:2px;
+  border: 1px solid #ff0c0c;
+
+  &__subSection{
+    display:flex;
+    cursor:pointer;
+    padding:0 10px;
+    &--left{
+      margin-right:1rem;
+    }
+    &:hover{
+    background: #ffd9d9;
+    }
+  }
+  &__title{
+    color: black;
+    letter-spacing: .5px;
+  }
+  &__span{
+    font-size: .9rem;
+    margin-left: 2px;
+    color: red;
+    font-weight: 600;
+  }
+  &__alertTitle{
+
+color: #f52222;
+padding: 4px 7px;
+margin:0 1rem;
+font-weight: 300;
+letter-spacing: .5px;
+// text-transform: capitalize;
+// text-transform: uppercase;
+font-size: .7rem;
+  }
+&__dismissAlert{
+  cursor:pointer;
+  color: #ffffff;
+  background: #ED213A;
+    background: linear-gradient(to right, #93291E, #ED213A);
+padding: 4px 9px;
+font-size: .8rem;
+font-weight: 300;
+letter-spacing: 1px;
+
+&:hover{
+font-weight:400;
+
+}
+
+}
+}
+
+// will display on expense list and driver list
+.licenseExpire{
+  display: flex;
+  &__driverName{
+    cursor:pointer;
+    text-transform: capitalize;
+color:#ea6868;
+font-weight: 500;
+margin-left: 1rem;
+letter-spacing: .5px;
+&:hover{
+color: red;
+
+}
+  }
+}

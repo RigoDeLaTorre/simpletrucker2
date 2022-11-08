@@ -1,0 +1,26 @@
+.driverLoadDetails {
+  .backButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    .material-icons {
+      margin-right: 5px;
+      font-size: 1rem;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      background: orange;
+      padding: 8px 30px;
+      border-radius: 30px;
+      box-shadow: $box-shadow;
+      &:hover {
+        background: #f5b236;
+      }
+    }
+  }
+}

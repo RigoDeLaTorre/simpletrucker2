@@ -1,0 +1,46 @@
+.notifications {
+  text-transform: capitalize;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  right: 0;
+  background: green;
+  color: #fff;
+  opacity: 0;
+  height: 0;
+  padding: 10px 20px;
+  &.danger {
+    background: red;
+  }
+  &.success {
+    background: green;
+  }
+  &.active {
+    z-index: 100;
+    animation-name: example;
+    animation-duration: 3s;
+  }
+}
+
+@keyframes example {
+  0% {
+    opacity: 1;
+    height: 40px;
+  }
+  25% {
+    opacity: 1;
+    height: 40px;
+  }
+  50% {
+    opacity: 1;
+    height: 40px;
+  }
+  75% {
+    opacity: 1;
+    height: 40px;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}

@@ -1,0 +1,206 @@
+.app-container-user {
+  color: white;
+  width: 100%;
+  position: relative;
+  .back-link {
+    text-align: center;
+    display: block;
+    font-size: 1.4rem;
+    padding: 2rem 0;
+    color: #039be5;
+    &:hover {
+      color: #5dcaff;
+    }
+  }
+  // .driverLandingPage {
+  //   // background: #1f2740;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 80vh;
+  //   // background: linear-gradient(#160556, rgba(14,23,37,0.9)),url(/img/auth-background.jpg);
+  //   // background-position: center center;
+  //   .driverBox {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     flex-direction: column;
+  //     padding: 63px;
+  //     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+  //       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  //     border-radius: 5px;
+  //     &__link {
+  //       color: white;
+  //       display: block;
+  //       background: #160556;
+  //       width: 100%;
+  //       padding: 23px 74px;
+  //       /* width: 300px; */
+  //       /* margin: 0; */
+  //       text-align: center;
+  //       &:hover {
+  //         background: #2b1580;
+  //       }
+  //       &--top {
+  //         margin-bottom: 1rem;
+  //       }
+  //     }
+  //   }
+  // }
+  // .nav {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: flex-end;
+  //   height: 100%;
+  //   text-align: center;
+  //   &__link {
+  //     color: white;
+  //     padding: 10px 0;
+  //     // background: #160556;
+  //
+  //     flex: 1;
+  //     &--active {
+  //       border-bottom: 4px solid #7543eb;
+  //       color: #d1c2f4;
+  //     }
+  //     &:hover {
+  //       color: #d1c2f4;
+  //     }
+  //   }
+  // }
+  // DRIVER LOGIN
+  .auth-form-driver {
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    input {
+      color: #000 !important;
+    }
+    &__form {
+      text-transform: capitalize;
+      color: #000;
+      min-width: 300px;
+    }
+    // .input-field {
+    //   flex: 1 !important;
+    //   margin: 0 0.5rem !important;
+    // }
+    &__field {
+      flex: 1;
+    }
+    &__inputbox {
+      margin-bottom: 2rem !important;
+    }
+    &__name {
+      font-size: 1.3rem;
+      letter-spacing: 5px;
+      margin-bottom: 1rem;
+      text-align: center;
+      &--marginBottom {
+        margin-bottom: 2rem;
+      }
+    }
+    &__email {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+  }
+
+  .auth-page-driverShow {
+    // background: #fff;
+  }
+  .showDrivers {
+    &__register {
+      // display: flex;
+      // align-items: center;
+    }
+    &__material-icons {
+      position: relative;
+      top: 5px;
+      &--green {
+        color: green;
+      }
+      &--red {
+        color: #e75e5e;
+      }
+    }
+  }
+  .driverformSelect {
+    display: block;
+    max-width: 130px;
+    min-width: 130px;
+    &--active {
+      background: #71ee71;
+    }
+    &--notactive {
+      background: #fd9696;
+    }
+    &__option {
+      text-transform: capitalize;
+    }
+    &__search {
+      position: absolute;
+      top: 34px;
+      left: 2px;
+      min-width: 200px;
+    }
+    &__button {
+      max-width: 150px;
+      background: #ff9b00 !important;
+      @media only screen and (max-width: $breakpoint-tablet) {
+        min-width: 0;
+      }
+      &:hover {
+        background: #fba724 !important;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .driverupdate-container {
+    display: flex;
+    @media only screen and (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      max-width: 130px;
+    }
+  }
+
+  .modal-trigger--noPointer {
+    cursor: default !important;
+  }
+  .modal-trigger {
+    &__updateDriverEmail {
+      color: #e75e5d !important;
+      &:hover {
+        color: #e75e5d !important;
+        font-weight: 400;
+      }
+    }
+    &__createDriverLink {
+      color: #0cec81 !important;
+      &:hover {
+        color: #62f1ad !important;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .modal {
+    color: white !important;
+
+    &__driverName {
+      color: white;
+      font-size: 1.3rem;
+      text-transform: capitalize;
+      line-height: 0;
+    }
+    &__driverPhone {
+      margin-bottom: 3rem;
+    }
+    &__driverEmailContainer {
+      margin-bottom: 2rem !important;
+    }
+  }
+}

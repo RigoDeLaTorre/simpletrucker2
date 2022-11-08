@@ -1,0 +1,51 @@
+@layout('layouts/driver')
+
+
+@section('title')
+7 Days Motor Lines
+@endsection
+
+@section('current-class')
+welcome-page
+
+@endsection
+
+
+
+@endsection
+
+
+@section('content')
+<section class="activeSection">
+
+
+
+<div class="display-table">
+<table class="table-container responsive-table display-table__container display-table__container--themeLight">
+        <thead class="display-table__thead">
+          <tr class="tr-customer">
+              <th class="row-header display-table__th display-table__th--themeLight">Load</th>
+                <th class="row-header display-table__th display-table__th--themeLight">Pickup</th>
+              <th class="row-header display-table__th display-table__th--themeLight">Delivery</th>
+                <th class="row-header display-table__th display-table__th--themeLight">Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @each(load in loads)
+            <tr class="modal-trigger themeLight" onclick=location.href="/driver/load/{{load.id}}/{{load.invoice_id}}">
+              <td class="cell invoice modal-trigger__td">{{ load.invoice_id }}</a></td>
+              <td class="cell invoice modal-trigger__td">{{ load.pickups.slice(-1).pop().pickup_date}} : {{ load.pickups.slice(-1).pop().pickup_city}} {{ load.pickups.slice(-1).pop().pickup_state}}</td>
+              <td class="cell invoice modal-trigger__td">{{ load.deliveries.slice(-1).pop().delivery_date}} : {{ load.deliveries.slice(-1).pop().delivery_city}},  {{ load.deliveries.slice(-1).pop().delivery_state}}</td>
+              <td class="cell invoice modal-trigger__td">{{ load.load_status }}</td>
+            </tr>
+          @endeach
+        </tbody>
+      </table>
+    </div>
+
+
+
+</section>
+
+@endsection

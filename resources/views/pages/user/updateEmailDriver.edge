@@ -1,0 +1,62 @@
+@layout('layouts/user')
+
+@section('title')
+Register
+@endsection
+
+
+
+
+@section('right-home-container')
+
+@endsection
+
+@section('content')
+  <a class="back-link" href="/driver/showDrivers">Back to Drivers</a>
+<ul>
+
+<div class="auth-form-driver">
+
+  <form method="POST" class="default-form auth-form-driver__form" action="/api/updateDriverPatch?_method=PUT">
+    {{ csrfField() }}
+    <div class="error-box
+    @if(hasErrorFor('driver_email'))
+    active
+    @endif
+    ">
+    @if(hasErrorFor('driver_email'))
+    "Email Validation Failed"
+    @endif
+    </div>
+  <div class="auth-form-driver__field">
+      <h4 class="auth-form-driver__name auth-form-driver__name--marginBottom">{{ first_name }} {{last_name}}</h4>
+        <input type="hidden" name="id" value="{{ id }}" class="text">
+    </div>
+
+    <div class="auth-form-driver__inputbox">
+    <div class="input-field col s12 auth-form-driver__field">
+      <label for="email">Email: </label>
+      <input type="text" name="driver_email" value="{{ old('driver_email', '') }}" class="text
+      @if(hasErrorFor('driver_email'))
+        error
+      @endif
+      ">
+    </div>
+
+    </div>
+
+  <div class="input-field col s12 auth-form-driver__field">
+      <button type="submit">Update Email</button>
+    </div>
+    <hr>
+
+  </form>
+
+</div>
+</ul>
+
+
+
+
+
+@endsection

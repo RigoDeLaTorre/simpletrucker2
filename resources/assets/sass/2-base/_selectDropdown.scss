@@ -1,0 +1,51 @@
+
+.datepicker-container {
+  color: #000000;
+}
+
+.select-wrapper {
+  .caret{
+    fill:rgb(98, 166, 255)!important;
+  }
+  ul {
+    li {
+      &:hover {
+        background: #747f9f !important;
+      }
+      span {
+        color: #000000 !important;
+      }
+    }
+  }
+  .disabled {
+    color: #fdecec !important;
+    span {
+      color: #db2e34 !important;
+    }
+  }
+  .selected {
+    background: #bcc4dd !important;
+  }
+}
+
+
+//Modal - Month/ Year
+.dropdown-trigger {
+  color: #000000 !important;
+}
+// Handles the State select field
+.formSelectFields {
+  .select-dropdown {
+    overflow-y: auto !important;
+    color: white !important;
+    &.dropdown-content {
+      max-height: 300px !important;
+      text-transform: capitalize;
+    }
+  }
+}
+.select-wrapper{
+  .dropdown-trigger{
+  color:white !important;
+  }
+}

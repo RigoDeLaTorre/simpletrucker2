@@ -1,0 +1,30 @@
+.search-container-drivers {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  .group-search {
+    display: flex;
+    align-items: center;
+    &.left-side {
+      margin-right: 5rem;
+    }
+    .search-icon {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+    input {
+      color: #ffffff;
+      border: 1px solid #1f2840;
+      padding: 0 10px;
+      width: 300px;
+      &::placeholder {
+        font-size: 0.8rem;
+        color: #697390;
+      }
+    }
+    input[type="text"]:focus {
+      border-bottom: 1px solid #62a6ff;
+      box-shadow: 0 1px 0 0 #62a6ff;
+    }
+  }
+}

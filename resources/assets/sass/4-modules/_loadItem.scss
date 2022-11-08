@@ -1,0 +1,63 @@
+// Remove Icon when a user is adding a new pickup/delivery
+
+.load-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 25px;
+  box-shadow: $box-shadow;
+  background: $table-background;
+  &--delivery {
+    // background: #101527;
+  }
+  .group-remove {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__number {
+      display: flex;
+      align-items: center;
+    }
+    &__link {
+      color: #ffffff;
+      cursor: pointer;
+      &:hover {
+        color: #36ade7;
+      }
+    }
+    &__numberText {
+      margin-right: 1rem;
+      font-weight: 300;
+      border: $border-bottom;
+      padding: 10px 20px;
+      // color: #cfcece;
+      border-radius: 2px;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+    }
+    &__pickup {
+      background: #5174e2;
+    }
+    &__delivery {
+      background: #2a840a;
+    }
+    &__button {
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      &--remove-icon,
+      &--delete-icon {
+        margin-right: 0.5rem;
+      }
+    }
+    &__delete__button {
+      margin-right: 0.5rem;
+      &.delete-icon {
+        width: 32px;
+      }
+    }
+  }
+  .add-pickup {
+    font-size: 2rem;
+  }
+}

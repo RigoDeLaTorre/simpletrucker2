@@ -1,0 +1,57 @@
+@layout('layouts/driver')
+
+
+@section('title')
+7 Days Motor Lines
+@endsection
+
+@section('current-class')
+welcome-page
+
+
+
+
+@endsection
+
+@section('content')
+<section class="driverLoadDetails">
+<h1 class="driverLoadDetails__loadId">Load #{{load.invoice_id}} - {{load.load_status}}</h1>
+
+<div class="backButton">
+  <h4 class="backButton__text" onclick="window.history.go(-1); return false;"><i class="material-icons">arrow_back</i>Back</h4>
+</div>
+
+<input class="driverUpload" type="file" accept="image/*" capture="camera" />
+<div class="driverLoadDetails__section">
+  <div class="driverLoadDetails__container">
+    @each(item in load.pickups)
+    <h4 class="driverLoadDetails__title">Pickup <span>{{item.pickup_date}}</span></h4>
+    <div class="driverLoadDetails__pickup">
+        <h4>{{item.pickup_name}}</h4>
+        <h4>{{item.pickup_address ? item.pickup_address : ""}}</h4>
+        <h4>{{item.pickup_city ? item.pickup_city :""}}, {{item.pickup_state ? item.pickup_state : ""}} {{item.pickup_zipcode ? item.pickup_zipcode :""}}</h4>
+        <h4>Pro# : {{item.pickup_po_number ? item.pickup_po_number : ""}}</h4>
+    </div>
+    @endeach
+  </div>
+
+  <div class="driverLoadDetails__container">
+  @each(item in load.deliveries)
+    <h4 class="driverLoadDetails__title driverLoadDetails__title--darkBackground">Delivery <span>{{item.delivery_date}}</span></h4>
+  <div class="driverLoadDetails__delivery">
+        <h4>{{item.delivery_name}}</h4>
+      <h4>{{item.delivery_address ? item.delivery_address : ""}}</h4>
+      <h4>{{item.delivery_city ? item.delivery_city :""}}, {{item.delivery_state ? item.delivery_state : ""}} {{item.delivery_zipcode ? item.delivery_zipcode :""}}</h4>
+      <h4>Pro# : {{item.delivery_po_number ? item.delivery_po_number : ""}}</h4>
+  </div>
+  @endeach
+</div>
+
+
+</div>
+
+</section>
+
+
+
+@endsection

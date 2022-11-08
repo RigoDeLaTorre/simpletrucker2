@@ -1,0 +1,98 @@
+#loadboard {
+  // margin: 0 auto;
+  // color: white;
+  // max-width: 95%;
+  // position: relative;
+  //
+
+  .pickupDateSearch {
+    // margin: 0 1rem;
+    text-align: center;
+    input[type="text"] {
+      text-align: center;
+    }
+  }
+  .pickupDateSearch__container {
+    // position: relative;
+    // top: 8px;
+
+    .switch {
+      margin: 0 !important;
+      width: 235px;
+      height: 36px;
+      line-height: 36px;
+      padding: 0 16px;
+    }
+    h2,
+    h4 {
+      text-align: center;
+      margin-right: 1rem;
+    }
+    h2 {
+      margin-top: 1rem;
+    }
+  }
+  .top-section {
+    @media only screen and (max-width: 1330px) {
+      position: inherit;
+      display: block;
+    }
+  }
+
+  .excel-button {
+    @media only screen and (max-width: 1330px) {
+      top: 51px;
+      right: 84px;
+    }
+  }
+  .paginationSection {
+    &__groupContainer {
+      @media only screen and (max-width: 1330px) {
+        position: absolute;
+        top: 26px;
+        right: 149px;
+      }
+    }
+  }
+  .sortBy {
+    margin: 0 1rem;
+    @media only screen and (max-width: 1330px) {
+      position: absolute;
+      top: 32px;
+      height: auto;
+      left: 10px;
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+      position: relative;
+      margin-bottom: 2rem;
+      left: -34px;
+      .container1 {
+        border: 1px solid #1f2740;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .searchBy {
+    @media only screen and (max-width: $breakpoint-mobile) {
+      .container1 {
+        border: 1px solid #1f2740;
+      }
+    }
+  }
+
+  .rdt {
+    @media only screen and (max-width: 550px) {
+      position: unset;
+    }
+  }
+  .rdtPicker {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      left: 5px;
+    }
+    @media only screen and (max-width: 550px) {
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, 10px);
+    }
+  }
+}

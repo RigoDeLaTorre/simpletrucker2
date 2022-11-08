@@ -1,0 +1,52 @@
+.pickup-delivery-section {
+  display: flex;
+  justify-content: center;
+  background: #0c1220;
+
+  @media only screen and (max-width: $breakpoint-desktop1600) {
+    flex-direction: column;
+  }
+  &.pickups {
+    // margin-right: 2.5rem;
+  }
+  .pickup-delivery-container {
+    flex: 1;
+    margin: 0.5rem 0;
+  }
+}
+.modal {
+  &__collapsible {
+    border: 0;
+  }
+  &__collapsibleHeader {
+    // color: white;
+    border-bottom: 0;
+    margin: 1px;
+    background: transparent;
+    &--pickup {
+      // background: #5174e2;
+      background: transparent;
+    }
+    &--delivery {
+      // background: #2a8e06;
+      background: transparent;
+    }
+    &--field {
+      background: transparent;
+    }
+    &--notes {
+      // background: #c3a11d;
+      background: transparent;
+    }
+    &--data {
+      background: transparent;
+    }
+  }
+  &__collapsibleNotes {
+    // color: #c1b9b9;
+    font-size: 0.8rem;
+  }
+  &__collapsibleBody {
+    border-bottom: 1px solid #4164de;
+  }
+}

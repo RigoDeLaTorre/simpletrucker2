@@ -1,0 +1,67 @@
+.default-form {
+  .error-box {
+    display: none;
+    background: #ff3658;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    &.danger {
+      background: #ffbcbf !important;
+      color: black;
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 32px 8px 16px;
+    }
+    &.success {
+      background: #bcffc7 !important;
+      color: black;
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 32px 8px 16px;
+    }
+    &.pending {
+      background: yellow;
+      color: black;
+      font-size: 15px;
+      line-height: 1.4;
+      padding: 8px 32px 8px 16px;
+    }
+    &.active {
+      display: block;
+    }
+  }
+
+  .form-group {
+    & > .error {
+      border: 1px solid red;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    width: 100%;
+    min-width: 200px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 4px;
+    padding: 10px 0;
+    color: white;
+    background: #9392ee;
+    border: none;
+
+    &:visited {
+      color: #27bf98;
+    }
+    &:hover {
+      background: #8180f1;
+      color: #fff;
+    }
+
+    &.currently-registering {
+      cursor: not-allowed;
+      background: orange;
+      pointer-events: none;
+    }
+  }
+}

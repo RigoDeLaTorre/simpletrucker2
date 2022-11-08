@@ -1,0 +1,7 @@
+#load-add-new {
+  .rdtPicker {
+    @media only screen and (max-width: $breakpoint-tablet) {
+      right: 5px;
+    }
+  }
+}

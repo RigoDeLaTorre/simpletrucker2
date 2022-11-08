@@ -1,0 +1,26 @@
+.fieldLabel {
+  &__label {
+    font-size: 0.8rem;
+  }
+
+  &__group {
+    display: flex;
+    align-items: flex-end;
+    // max-width: 375px;
+  }
+  &__subGroup {
+    flex: 1;
+    &--flex3 {
+      flex: 3;
+    }
+    &--flex2 {
+      flex: 2;
+    }
+    &--noPadding {
+      padding: 0 !important;
+    }
+    &--width100 {
+      max-width: 100%;
+    }
+  }
+}

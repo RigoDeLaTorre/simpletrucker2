@@ -1,0 +1,13 @@
+.modal-content {
+  background: #1a1f34;
+  color: #8b92a9;
+  font-weight: 300;
+  letter-spacing: 2px;
+
+  &--morePadding {
+    padding: 65px !important;
+  }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    padding: 0 !important;
+  }
+}

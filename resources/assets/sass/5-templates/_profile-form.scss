@@ -1,0 +1,136 @@
+#profile {
+  overflow: hidden;
+}
+#profile-add-new {
+  overflow: hidden;
+  position: relative;
+  max-width: 1000px;
+}
+#profile-edit {
+  overflow: hidden;
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+.profile-form {
+  &__sectionContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      flex-flow: column wrap;
+    }
+  }
+  &__section {
+    background: #1f2740;
+    padding: 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+    position: relative;
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      width: 95%;
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 2rem;
+    }
+  }
+
+  &__copyButton {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    background: #a4c0df;
+    padding: 5px 15px;
+    color: #302c2c;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &:hover {
+      background: #4092ed;
+      font-weight: 700;
+    }
+    .arrow-copy {
+      margin-left: 10px;
+    }
+  }
+  &__title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+  }
+  &__subTitle {
+    margin-bottom: 5rem;
+  }
+}
+
+.starting-id {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  &__titleGroup {
+    margin-right: 2rem;
+  }
+  &__field {
+    background: #1f2740;
+    padding: 25px;
+    margin-top: 2rem;
+  }
+  &__title {
+    color: white;
+    font-size: 1.5rem;
+  }
+  &__subtitle {
+    font-size: 1rem;
+    color: #b8b2b2;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+
+    // font-size: 1.2rem;
+    // margin-bottom: 5rem;
+    // letter-spacing: 2px;
+    // font-weight: 100;
+  }
+}
+
+#profile-view {
+  overflow: hidden;
+  position: relative;
+
+  .header-title {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px 0;
+    color: white;
+    font-weight: 500;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    a {
+      margin-left: 1rem;
+    }
+  }
+}

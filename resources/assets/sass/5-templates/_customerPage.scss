@@ -1,0 +1,85 @@
+.customer-form {
+  &__sectionContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1rem;
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      flex-direction: column;
+    }
+  }
+  &__section {
+    background: #1f2740;
+    padding: 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    flex-basis: 48%;
+    position: relative;
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      width: 100%;
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding:1rem;
+    }
+    &--quickpay {
+      flex-basis: 70%;
+    }
+  }
+
+  &--lightBlue {
+    // background: #38446a;
+  }
+
+  &__copyButton {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    background: #a4c0df;
+    padding: 5px 15px;
+    color: #302c2c;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &:hover {
+      background: #4092ed;
+      font-weight: 700;
+    }
+    .arrow-copy {
+      margin-left: 10px;
+    }
+  }
+  &__title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  &__subTitle {
+    font-weight: 100;
+    &--marginBottom5rem {
+      margin-bottom: 5rem;
+    }
+  }
+  &__subTitleRequired {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0 !important;
+    margin-top: 1rem !important;
+    &--asterick {
+      color: #cc284d;
+      margin-bottom: 5rem;
+    }
+  }
+  &__showErrorMessage {
+    color: #0de48f;
+    margin-bottom: 2rem;
+  }
+}

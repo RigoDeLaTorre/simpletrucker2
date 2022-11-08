@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    @!section('title')
+  </title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="../../node_modules/materialize-css/dist/css/materialize.min.css"> -->
+
+<link rel="stylesheet" href="/css/main.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137384350-1"></script>
+<script>
+window.dataLayer = window.dataLayer || []
+function gtag() {
+  dataLayer.push(arguments)
+}
+gtag('js', new Date())
+gtag('config', 'UA-137384350-1')
+</script> 
+
+
+</head>
+<body>
+
+  <div id ="home">
+      @!section('notifications')
+    <div class="navigation">
+      <div class="sidenavTrigger-container">
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons sidenav-trigger__icon">menu</i>
+        </a>
+      </div>
+      <div class="nav-section">
+        <ul id="slide-out" class="sidenav collapsible">
+          <li>
+            <div class="user-group">
+              <h1 class="user-group__logo">Simple Trucker</h1>
+                <h2 class="user-group__companyName">
+                @!section('companyName')
+                </h2>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons left">dashboard</i>Loads
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+
+                  <a
+                    href="/loads/loadboard"
+                    class="nav-section__link nav-section__link--flex"
+                    >
+                    Load Board
+                  </a>
+                </li>
+                <li>
+
+                  <a
+                    href="/loads/addnew"
+                    class="nav-section__link nav-section__link--lessPadding"
+                    >
+                    Add New Load
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons left">people</i>Customers
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <a
+                    href="/customers/search"
+                    class="nav-section__link nav-section__link--flex"
+                    >
+                    Customers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/customers/addnew"
+                    class="nav-section__link nav-section__link--lessPadding"
+                    >
+                    Add New Customer
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/customers/pastloads"
+                    class="nav-section__link"
+                    >
+                    Customer Past Loads
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+
+              <h4 class="nav-section__sectionTitle">
+                <img
+                  class="nav-section__titleIcon"
+                  src="/img/icons/driverIcon.svg"
+                />
+                Drivers
+              </h4>
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <a
+                    href="/drivers/search"
+                    class="nav-section__link nav-section__link--flex"
+                    >
+                    Drivers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/drivers/addnew"
+                    class="nav-section__link nav-section__link--lessPadding"
+                    >
+                    Add New Driver
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/drivers/pastloads"
+                    class="nav-section__link"
+                    >
+                    Driver Past Loads
+                  </a>
+                </li>
+                <li>
+                  <a href="/driver/showDrivers" class="nav-section__link">
+                    Driver Login Access
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons left">account_balance</i>Accounting
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <a
+                    href="/accounting/loads"
+                    class="nav-section__link"
+                    >
+                    Loads
+                  </a>
+                </li>
+
+                {{--
+                <li>
+                  <a
+                    href="/accounting/Drivers"
+                    class="nav-section__link"
+                    >
+                    Drivers Payroll
+                  </a>
+                </li> --}}
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+
+              <h4 class="nav-section__sectionTitle">
+                <img
+                  class="nav-section__titleIcon"
+                  src="/img/icons/truckIcon.svg"
+                />Equipment
+              </h4>
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <a
+                    href="/trucks/trucklist"
+                    class="nav-section__link nav-section__link--flex"
+                    >
+                    Trucks
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/trucks/addnew"
+                    class="nav-section__link nav-section__link--lessPadding"
+                    >
+                    Add New Truck
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/trailers/trailerlist"
+                    class="nav-section__link nav-section__link--flex"
+                    >
+                    Trailers
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/trailers/addnew"
+                    class="nav-section__link nav-section__link--lessPadding"
+                    >
+                    Add New Trailer
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="collapsible-header">
+
+              <i class="material-icons left">payment</i>Expenses
+            </div>
+            <div class="collapsible-body">
+              <ul>
+                <li>
+                  <div class="nav-section__linkGroup">
+                    <a
+                      href="/expense/expenseList"
+                      class="nav-section__link nav-section__link--flex"
+                      >
+                      Expenses
+                    </a>
+                    <a
+                      href="/expense/expenseAddNew"
+                      class="nav-section__link nav-section__link--lessPadding"
+                      >
+                      +
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-section__linkGroup">
+                    <a
+                      href="/vendors/vendorList"
+                      class="nav-section__link nav-section__link--flex"
+                      >
+                      Vendors
+                    </a>
+                    <a
+                      href="/vendors/vendorAddNew"
+                      class="nav-section__link nav-section__link--lessPadding"
+                      >
+                      +
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-section__linkGroup">
+                    <a
+                      href="/category/categoryExpenseList"
+                      class="nav-section__link nav-section__link--flex"
+                      >
+                      Category
+                    </a>
+                    <a
+                      href="/category/addNew"
+                      class="nav-section__link nav-section__link--lessPadding"
+                      >
+                      +
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="nav-section__linkGroup">
+                    <a
+                      href="/expense/type/expenseTypeList"
+                      class="nav-section__link nav-section__link--flex"
+                      >
+                      Sub-category
+                    </a>
+                    <a
+                      href="/trucks/expenseListAddNew"
+                      class="nav-section__link nav-section__link--lessPadding"
+                      >
+                      +
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="desktop-nav">
+          <li>
+            <div class="user-group">
+              <h1 class="user-group__logo">Simple Trucker</h1>
+                <h2 class="user-group__companyName">
+                @!section('companyName')
+                </h2>
+            </div>
+          </li>
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <i class="material-icons left">dashboard</i>Loads
+            </h4>
+            <div class="nav-section__linkGroup">
+              <a
+                href="/loads/loadboard"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Load Board
+              </a>
+              <a
+                href="/loads/addnew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+          </li>
+
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <i class="material-icons left">people</i>Customers
+            </h4>
+            <div class="nav-section__linkGroup">
+              <a
+                href="/customers/search"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Customer List
+              </a>
+              <a
+                href="/customers/addnew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+            <a
+              href="/customers/pastloads"
+              class="nav-section__link"
+              activeclass="selected">
+              Past Loads
+            </a>
+          </li>
+
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <img
+                class="nav-section__titleIcon"
+                src="/img/icons/driverIcon.svg"
+              />
+              Drivers
+            </h4>
+            <div class="nav-section__linkGroup">
+              <a
+                href="/drivers/search"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Driver List
+              </a>
+              <a
+                href="/drivers/addnew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+
+            <a
+              href="/drivers/pastloads"
+              class="nav-section__link"
+              activeclass="selected">
+              Past Loads
+            </a>
+            <a href="/driver/showDrivers" class="nav-section__link">
+              Driver Login Access
+            </a>
+          </li>
+
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <i class="material-icons left">account_balance</i>Accounting
+            </h4>
+            <a
+              href="/accounting/loads"
+              class="nav-section__link"
+              activeclass="selected">
+              Loads
+            </a>
+
+            {{--
+            <a
+              href="/accounting/Drivers"
+              class="nav-section__link"
+              activeclass="selected">
+              Drivers Payroll
+            </a> --}}
+          </li>
+
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <img
+                class="nav-section__titleIcon"
+                src="/img/icons/truckIcon.svg"
+              />Equipment
+            </h4>
+
+            <div class="nav-section__linkGroup">
+              <a
+                href="/trucks/trucklist"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Trucks
+              </a>
+              <a
+                href="/trucks/addnew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+
+            <div class="nav-section__linkGroup">
+              <a
+                href="/trailers/trailerlist"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Trailers
+              </a>
+              <a
+                href="/trailers/addnew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+          </li>
+          <li class="nav-section__group">
+            <h4 class="nav-section__sectionTitle">
+              <i class="material-icons left">payment</i>Expenses
+            </h4>
+
+            <div class="nav-section__linkGroup">
+              <a
+                href="/expense/expenseList"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Expenses
+              </a>
+              <a
+                href="/expense/expenseAddNew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+
+            <div class="nav-section__linkGroup">
+              <a
+                href="/vendors/vendorList"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Vendors
+              </a>
+              <a
+                href="/vendors/vendorAddNew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+            <div class="nav-section__linkGroup">
+              <a
+                href="/category/categoryExpenseList"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Category
+              </a>
+              <a
+                href="/category/addNew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+            <div class="nav-section__linkGroup">
+              <a
+                href="/subCategory/list"
+                class="nav-section__link nav-section__link--flex"
+                activeclass="selected">
+                Sub-category
+              </a>
+              <a
+                href="/subCategory/addNew"
+                class="nav-section__link nav-section__link--lessPadding"
+                activeclass="selected">
+                +
+              </a>
+            </div>
+          </li>
+      </ul>
+      </div>
+      </div>
+    <div class="app-container-user
+
+    @!section('current-class')
+      " style ="
+      @!section('custom-style-app-container')
+      ">
+
+      <div class="topNavBars">
+
+        <ul id="dropdown1" class="dropdown-content">
+          <li>
+            <a href="/profile" class="topNavBar__link">Profile</a>
+          </li>
+          <li>
+          <a href="/settings" class="topNavBar__link">
+            Settings
+          </a>
+          </li>
+          <li>
+            <a
+              href="/purchases/search"
+              class="topNavBar__link"
+            >
+              Purchases
+            </a>
+          </li>
+          <li class="divider" />
+          <li>
+            <div class="user-group">
+              <a class="topNavBar__logout" href="/logout">
+                logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <nav
+          class="topNavBar__nav topNavBar__nav--height100">
+          <div class="nav-wrapper">
+                <h4 href="#!" class="topNavBar__sectionTitle center">Driver-Login Access</h4>
+            <ul class="topNavBar__accountIcon right">
+              <li>
+                <a
+                  class="dropdown-trigger"
+                  href="#!"
+                  data-target="dropdown1">
+                  <i class="material-icons topNavBar__icon">
+                    account_circle
+                  </i>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+
+      </div>
+
+
+
+
+
+
+    @!section('content')
+
+    </div>
+    <!-- <script src="../../node_modules/materialize-css/dist/js/materialize.min.js" charset="utf-8"></script> -->
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+  var dropdown = document.querySelectorAll('.dropdown-trigger')
+  var dropdownInstance = M.Dropdown.init(dropdown)
+  var sidenav = document.querySelectorAll('.sidenav')
+  var sidenavInstance = M.Sidenav.init(sidenav)
+  var collapsibleElem = document.querySelector('.collapsible')
+  var collapsibleInstance = M.Collapsible.init(collapsibleElem)
+  var modal = document.querySelectorAll('.modal')
+  var modalInstance = M.Modal.init(modal, {
+    onOpenStart: (testingIt = (modal, trigger) => {
+      //element that clicked it
+      let firstName = trigger.getAttribute('data-firstName')
+      let lastName = trigger.getAttribute('data-lastName')
+      let id = trigger.getAttribute('data-id')
+      let phone = trigger.getAttribute('data-phone')
+      let fullName = firstName + ' ' + lastName
+
+      //change modal info
+      document.getElementById('modal__driverName').innerHTML = fullName
+      document.getElementById('modal__driverPhone').innerHTML =
+        'Phone :' + phone
+      document.getElementById('id').setAttribute('value', id)
+    })
+  })
+})
+
+// })
+</script>
+</body>
+</html>

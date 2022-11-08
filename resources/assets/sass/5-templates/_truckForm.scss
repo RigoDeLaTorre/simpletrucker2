@@ -1,0 +1,299 @@
+//Modal - Month/ Year
+
+.form {
+  &__title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    &--marginBottom {
+      margin-bottom: 3rem;
+    }
+  }
+  &__subTitle {
+    font-weight: 100;
+    &--marginBottom5rem {
+      margin-bottom: 5rem;
+    }
+  }
+  &__subTitleRequired {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0 !important;
+    margin-top: 1rem !important;
+    &--asterick {
+      color: #cc284d;
+      margin-bottom: 5rem;
+    }
+  }
+  &__sectionContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1rem;
+    &--modal {
+      margin: 0;
+      display: block;
+    }
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      flex-direction: column;
+    }
+  }
+  &__section {
+    background: #1f2740;
+    padding: 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    position: relative;
+    // &--themeLight {
+    //   background: #ffffff;
+    // }
+    &--accounting {
+      padding: 2rem;
+      // background: #101527;
+    }
+    @media only screen and (max-width: $breakpoint-desktop1600) {
+      width: 100%;
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+      padding: 1rem;
+    }
+    &--quickpay {
+      flex-basis: 70%;
+    }
+    &__title {
+      text-align: center;
+
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      letter-spacing: 5px;
+      padding: 2rem 0;
+      background: #0c1220;
+    }
+  }
+  &__group {
+    position: relative;
+    background: #1f2740;
+    padding: 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+    &--fillContainer {
+      flex: 1;
+      @media only screen and (max-width: $breakpoint-mobile) {
+        padding: 1rem;
+      }
+    }
+    // flex:1;
+    @media only screen and (max-width: $breakpoint-laptop) {
+      flex: 1;
+    }
+    &--left {
+      margin-right: 2rem;
+      flex: 2;
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: flex-end;
+    &--columnNow {
+      flex-direction: column;
+    }
+    &--marginBottom {
+      margin-bottom: 3rem;
+    }
+    &--column {
+      @media only screen and (max-width: $breakpoint-laptop) {
+        flex-direction: column;
+      }
+      &--marginBottom5rem {
+        margin-bottom: 5rem;
+      }
+    }
+    &--columnTablet {
+      @media only screen and (max-width: $breakpoint-tablet) {
+        flex-direction: column;
+      }
+    }
+    &--columnPhone {
+      @media only screen and (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+      }
+    }
+  }
+  &__field {
+    color: #000000;
+    text-transform: capitalize;
+    &--minWidth150 {
+      min-width: 150px;
+      @media only screen and (max-width: $breakpoint-mobile) {
+        min-width: 100%;
+      }
+    }
+    &--minWidth300 {
+      // min-width: 300px;
+      min-width: 209px;
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
+    }
+    &--minWidth85 {
+      min-width: 85px;
+    }
+    &--flex1 {
+      flex: 1;
+    }
+    &--flex2 {
+      flex: 2;
+    }
+    &--flex3 {
+      flex: 3;
+    }
+    &--flex4 {
+      flex: 4;
+    }
+    &--noMarginBottom {
+      margin-bottom: 0;
+    }
+    // &__bottomText{
+    //   font-size: .7rem;
+    //   margin-top: 5px;
+    // }
+    // &__topText{
+    //   font-size: .7rem;
+    //   margin-bottom: 5px;
+    // }
+    &--column {
+      @media only screen and (max-width: $breakpoint-laptop) {
+        margin-bottom: 2rem !important;
+        //  border: 1px solid white;
+        // padding: 0 10px;
+      }
+    }
+  }
+  &__formTitle {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+    letter-spacing: 2px;
+  }
+  &__saveContainer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    &--padding {
+      padding: 2rem 0;
+    }
+    &--relativePositionBottom {
+      position: relative;
+      right: -81px;
+      bottom: -72px;
+    }
+    &--flexSpaceBetween {
+      justify-content: space-between;
+    }
+  }
+  &__buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__buttonTitle {
+      margin-top: 0.5rem !important;
+      font-size: 0.8rem;
+      color: white;
+    }
+  }
+  &__closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  &__attachment {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 1rem;
+  }
+  &__modal-fileAttachment {
+    display: flex;
+    position: relative;
+    top: 20px;
+    justify-content: space-between;
+    &__uploadBox {
+      background-color: #5345b8;
+      &:hover {
+        background-color: #372d80;
+      }
+    }
+    &--url {
+      font-size: 0.9rem;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        height: 4px;
+        background-color: #fff;
+        width: 0;
+        transition: width 0.25s;
+      }
+      &:hover::after {
+        content: '';
+        width: 100%;
+      }
+    }
+    &--remove-link {
+      position: relative;
+      color: #ee3b3b;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        height: 3px;
+        background-color: #fff;
+        width: 0;
+        transition: width 0.25s;
+      }
+      &:hover::after {
+        content: '';
+        width: 100%;
+      }
+    }
+  }
+  &__copyButton {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    background: #a4c0df;
+    padding: 5px 15px;
+    color: #302c2c;
+    font-weight: 500;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    &:hover {
+      background: #4092ed;
+      font-weight: 700;
+    }
+    .arrow-copy {
+      margin-left: 10px;
+    }
+  }
+
+  &__modalSectionTitle {
+    text-align: center;
+    letter-spacing: 5px;
+    // margin: 1rem auto;
+  }
+}

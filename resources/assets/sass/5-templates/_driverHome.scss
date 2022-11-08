@@ -1,0 +1,66 @@
+#driver {
+  overflow: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  color: white;
+  max-width: 95%;
+  position: relative;
+}
+
+#driver-search {
+  &.driver-search {
+    .top-section {
+      @media only screen and (max-width: 550px) {
+        position: unset;
+      }
+      &__filterMobileGroup {
+        @media only screen and (max-width: 550px) {
+          margin: 0 auto;
+        }
+      }
+
+      .excel-button {
+        @media only screen and (max-width: 550px) {
+          top: 51px;
+          right: 84px;
+        }
+      }
+      .paginationSection {
+        &__groupContainer {
+          @media only screen and (max-width: 550px) {
+            position: absolute;
+            top: 26px;
+            right: 149px;
+          }
+        }
+      }
+    }
+  }
+  // PAST LOADS FOR DRIVER
+  &.driver-past-loads {
+    .top-section {
+      @media only screen and (max-width: 753px) {
+        position: unset;
+      }
+      &__filterMobileGroup {
+        @media only screen and (max-width: 525px) {
+          flex-direction: column;
+          margin: 0 auto;
+        }
+      }
+      .sortBy {
+        @media only screen and (max-width: 753px) {
+          position: absolute;
+          top: 22px;
+          left: 10px;
+          height: auto;
+        }
+
+        @media only screen and (max-width: 525px) {
+          position: unset;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.theme{
+  display: flex;
+  justify-content: space-around;
+  flex-flow:row wrap;
+  padding:2rem 0;
+  img{
+    max-width:100%;
+  }
+  &__item{
+    background: #fff;
+    margin:0 1rem;
+    max-width: 400px;
+  }
+  &__label{
+    display: flex;
+    color: #000;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0;
+    cursor:pointer;
+    &:hover{
+    background: #cab3f3;
+        }
+  }
+  &__span{
+    color:#000;
+  }
+}
